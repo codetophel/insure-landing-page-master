@@ -92,21 +92,19 @@
         display: none;
       }
 
-      .intro {
-        background: hsl(256, 26%, 20%);
-        color: hsl(0, 0%, 98%);
-        height: 60vh;
-        margin-bottom: 50px;
-      }
-
       .row {
         display: flex;
         flex-wrap: wrap;
         padding: 50px 10%;
+        justify-content: space-between;
       }
 
       .intro-col-1 {
         flex-basis: 40%;
+        background: hsl(256, 26%, 20%);
+        color: hsl(0, 0%, 98%);
+        height: 60vh;
+        margin-bottom: 50px;
       }
 
       .intro-col-1 h2 {
@@ -147,8 +145,6 @@
 
       .intro-col-2 img {
         width: 100%;
-        height: 60%;
-        margin-left: 50%;
       }
       .container {
         padding: 10px 10%;
@@ -361,6 +357,57 @@
         }
         .social-row h2 {
           margin-bottom: 20px;
+        }
+
+        .services {
+          text-align: center;
+        }
+        .services hr {
+          width: 50%;
+          margin: 20px auto;
+          color: hsl(216, 30%, 68%);
+        }
+
+        .subtitle {
+          font-size: 40px;
+          margin-bottom: 15px;
+        }
+
+        .service h3 {
+          margin-bottom: 10px;
+          font-size: 20px;
+          color: hsl(256, 26%, 20%);
+        }
+
+        .service p {
+          font-size: 14px;
+          color: hsl(216, 30%, 68%);
+        }
+
+        .intro-col-1,
+        .intro-col-2 {
+          flex-basis: 100%;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .intro-col-1 {
+          margin-top: 0;
+          text-align: center;
+          padding: 50px 5%;
+        }
+
+        .row {
+          align-items: center;
+          justify-content: center;
+          flex-flow: wrap-reverse;
+          padding: 50px 0;
+        }
+
+        .intro-col-2 img {
+          width: 100%;
+          height: 100%;
+          margin: 0;
         }
       }
     </style>
