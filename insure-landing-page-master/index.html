@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Insure landing page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Karla', sans-serif;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-size: 16px;
+      }
+
+      nav {
+        padding: 15px 10%;
+        display: flex;
+        align-items: right;
+        justify-content: space-between;
+      }
+
+      .logo {
+        color: hsl(256, 26%, 20%);
+        text-transform: uppercase;
+        letter-spacing: 1.5;
+        font-size: 25px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px 15px;
+      }
+
+      nav ul li a {
+        color: hsl(216, 30%, 68%);
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      nav ul li a:hover {
+        color: hsl(256, 26%, 20%);
+      }
+
+      .btn {
+        background-color: transparent;
+        border: 2px solid hsl(256, 26%, 20%);
+        color: hsl(256, 26%, 20%);
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 7px 15px;
+        transition: 0.4s;
+      }
+
+      .btn:hover {
+        background: hsl(256, 26%, 20%);
+        color: hsl(0, 0%, 98%);
+      }
+
+      nav img {
+        display: none;
+      }
+
+      .intro {
+        background: hsl(256, 26%, 20%);
+        color: hsl(0, 0%, 98%);
+        height: 60vh;
+        margin-bottom: 50px;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 10%;
+      }
+
+      .intro-col-1 {
+        flex-basis: 40%;
+      }
+
+      .intro-col-1 h2 {
+        font-size: 45px;
+        margin-bottom: 20px;
+      }
+
+      .intro-col-1 p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .intro-col-1 hr {
+        width: 20%;
+        margin-bottom: 20px;
+        color: hsl(216, 30%, 68%);
+      }
+
+      .intro-col-1 button {
+        background-color: transparent;
+        border: 2px solid hsl(0, 0%, 98%);
+        color: hsl(0, 0%, 98%);
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 7px 15px;
+        transition: 0.4s;
+      }
+
+      .intro-col-1 button:hover {
+        color: hsl(256, 26%, 20%);
+        background: hsl(0, 0%, 98%);
+      }
+
+      .intro-col-2 {
+        flex-basis: 40%;
+      }
+
+      .intro-col-2 img {
+        width: 100%;
+        height: 60%;
+        margin-left: 50%;
+      }
+      .container {
+        padding: 10px 10%;
+      }
+
+      .services {
+        margin-top: 70px;
+        margin-bottom: 50px;
+      }
+
+      .services hr {
+        width: 10%;
+        margin-bottom: 20px;
+        color: hsl(216, 30%, 68%);
+      }
+
+      .service-list {
+        display: grid;
+        margin-top: 50px;
+        grid-gap: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+
+      .service img {
+        width: 50px;
+        margin-bottom: 20px;
+      }
+
+      .subtitle {
+        font-size: 50px;
+        margin-bottom: 25px;
+        color: hsl(256, 26%, 20%);
+      }
+
+      .service h3 {
+        margin-bottom: 15px;
+        font-size: 25px;
+        color: hsl(256, 26%, 20%);
+      }
+
+      .service p {
+        font-size: 14px;
+        color: hsl(216, 30%, 68%);
+      }
+
+      footer {
+        background: hsl(0, 0%, 98%);
+      }
+
+      .footer-details {
+        display: grid;
+        margin-top: 50px;
+        grid-gap: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      footer hr {
+        color: hsl(216, 30%, 68%);
+      }
+
+      .findmore {
+        background: hsl(256, 26%, 20%);
+        color: hsl(0, 0%, 98%);
+      }
+
+      .findmore-col-1 h2 {
+        font-size: 35px;
+      }
+
+      .findmore-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        align-content: space-between;
+        padding: 50px 0;
+      }
+
+      .findmore-col-2 button {
+        background-color: transparent;
+        border: 2px solid hsl(0, 0%, 98%);
+        color: hsl(0, 0%, 98%);
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 7px 15px;
+      }
+
+      .findmore-col-2 button:hover {
+        color: hsl(256, 26%, 20%);
+        background: hsl(0, 0%, 98%);
+      }
+
+      .social-row {
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: right;
+        justify-content: space-between;
+        padding: 15px 0;
+      }
+
+      .social-icons a {
+        text-decoration: none;
+      }
+
+      .social-icons img {
+        text-decoration: none;
+        padding-right: 15px;
+        cursor: pointer;
+      }
+
+      .social-icons img:hover {
+        color: hsl(256, 26%, 20%) !important;
+      }
+
+      .footer-list h3 {
+        text-transform: uppercase;
+        font-size: 12px;
+        color: hsl(216, 30%, 68%);
+        margin-bottom: 20px;
+      }
+
+      .footer-list ul li {
+        padding-top: 10px;
+        list-style: none;
+      }
+
+      .footer-list ul li a {
+        text-decoration: none;
+        color: hsl(256, 26%, 20%);
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(256, 26%, 20%);
+        text-decoration: none;
+      }
+
+      @media only screen and (max-width: 600px) {
+        nav {
+          align-items: center;
+        }
+        nav ul {
+          background: hsl(270, 9%, 17%);
+          width: 100%;
+          height: 100vh;
+          position: fixed;
+          top: 0;
+          right: -100%;
+          padding-top: 50px;
+          transition: right 0.6s;
+          text-align: center;
+        }
+
+        nav img {
+          display: block;
+          font-size: 25px;
+        }
+
+        nav ul li {
+          display: block;
+          margin: 25px;
+        }
+
+        nav ul li a {
+          color: hsl(0, 0%, 98%);
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: 5px;
+        }
+
+        nav ul img {
+          position: absolute;
+          top: 25px;
+          right: 45px;
+          cursor: pointer;
+        }
+
+        .btn {
+          border: 2px solid hsl(0, 0%, 98%);
+          color: hsl(0, 0%, 98%);
+          text-transform: uppercase;
+          font-weight: bold;
+          text-decoration: none;
+          /* padding: 7px 15px; */
+          width: 100% !important;
+        }
+        footer {
+          text-align: center;
+          font-weight: bold;
+        }
+
+        .findmore {
+          display: block;
+          text-align: center;
+        }
+
+        .findmore h2 {
+          margin-bottom: 25px;
+        }
+
+        .social-row {
+          display: block;
+        }
+        .social-row h2 {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="Menu">
+      <nav>
+        <h2 class="logo">INSURE</h2>
+        <ul id="sidemenu">
+          <li><a href="">How we work</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Account</a></li>
+          <a class="btn" href="#viewplans">View plans</a>
+          <img
+            onclick="closemenu()"
+            src="./images/icon-close.svg"
+            alt="close_icon"
+          />
+        </ul>
+        <img
+          onclick="openmenu()"
+          src="./images/icon-hamburger.svg"
+          alt="open_hambuger"
+        />
+      </nav>
+
+      <div class="intro">
+        <!-- <img
+          class="intro-left-pattern"
+          src="./images/bg-pattern-intro-left-desktop.svg"
+          alt=""
+        />
+        <img
+          class="intro-right-pattern"
+          src="./images/bg-pattern-intro-right-desktop.svg"
+          alt=""
+        /> -->
+        <div class="row">
+          <div class="intro-col-1">
+            <hr />
+            <h2>Humanizing your insurance.</h2>
+            <p>
+              Get your life insurance coverage easier and faster. We blend our
+              expertise and technology to help you find the plan that’s right
+              for you. Ensure you and your loved ones are protected.
+            </p>
+            <button>View plans</button>
+          </div>
+          <div class="intro-col-2">
+            <img
+              src="./images/image-intro-desktop.jpg"
+              alt="a train of people holding hands"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- different section -->
+    <div class="services">
+      <div class="container">
+        <hr />
+        <h2 class="subtitle">We’re different</h2>
+        <div class="service-list">
+          <div class="service">
+            <img src="./images/icon-snappy-process.svg" alt="" />
+            <h3>Snappy Process</h3>
+            <p>
+              Our application process can be completed in minutes, not hours.
+              Don’t get stuck filling in tedious forms.
+            </p>
+          </div>
+          <div class="service">
+            <img src="./images/icon-affordable-prices.svg" alt="" />
+            <h3>Affordable Prices</h3>
+            <p>
+              We don’t want you worrying about high monthly costs. Our prices
+              may be low, but we still offer the best coverage possible.
+            </p>
+          </div>
+          <div class="service">
+            <img src="./images/icon-people-first.svg" alt="" />
+            <h3>People First</h3>
+            <p>
+              Our plans aren’t full of conditions and clauses to prevent
+              payouts. We make sure you’re covered when you need it.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- find more -->
+    <div class="container">
+      <div class="findmore">
+        <div class="findmore-row">
+          <div class="findmore-col-1">
+            <h2>Find out more about how we work</h2>
+          </div>
+          <div class="findmore-col-2">
+            <button>How we work</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="social-row">
+          <div class="insure-col">
+            <h2>INSURE</h2>
+          </div>
+          <div class="social-icons">
+            <a href="">
+              <img src="./images/icon-facebook.svg" alt="facebook_icon" />
+            </a>
+            <a href="">
+              <img src="./images/icon-twitter.svg" alt="twitter_icon" />
+            </a>
+            <a href="">
+              <img src="./images/icon-pinterest.svg" alt="pinterest_icon" />
+            </a>
+            <a href="">
+              <img src="./images/icon-instagram.svg" alt="instagram_icon" />
+            </a>
+          </div>
+        </div>
+        <hr />
+
+        <div class="footer-details">
+          <div class="footer-list">
+            <h3>Our Company</h3>
+            <ul>
+              <li><a href=""> HOW WE WORK </a></li>
+              <li><a href="">Why Insure?</a></li>
+              <li><a href="">View plans</a></li>
+              <li><a href="">Reviews</a></li>
+            </ul>
+          </div>
+          <div class="footer-list">
+            <h3>help me</h3>
+            <ul>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Terms of use</a></li>
+              <li><a href="">Privacy policy</a></li>
+              <li><a href="">Cookies</a></li>
+            </ul>
+          </div>
+          <div class="footer-list">
+            <h3>contact</h3>
+            <ul>
+              <li><a href="">sales </a></li>
+              <li><a href="">support</a></li>
+              <li><a href="">live chat</a></li>
+            </ul>
+          </div>
+          <div class="footer-list">
+            <h3>Others</h3>
+            <ul>
+              <li><a href=""> careers </a></li>
+              <li><a href="">press</a></li>
+              <li><a href="">Licenses</a></li>
+              <li><a href="">Reviews</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Codetophel</a>.
+    </div>
+
+    <script>
+      var sidemeu = document.getElementById('sidemenu');
+      function openmenu() {
+        sidemeu.style.right = '0';
+      }
+      function closemenu() {
+        sidemeu.style.right = '-100%';
+      }
+    </script>
+  </body>
+</html>
