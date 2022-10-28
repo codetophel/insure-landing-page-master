@@ -36,43 +36,65 @@
 
     <title>Insure landing page</title>
 <body>
-  <header class="flex items-center justify-between p-5 ">
-    <div>
-      <img src="./images/logo.svg" alt="insure logo"> 
-    </div>
-
-    <div>
-      <img src="./images/icon-hamburger.svg" alt="">
-    </div>
-  </header>
+  <nav>
+    <h2 class="logo">INSURE</h2>
+    <ul id="sidemenu">
+      <li><a href="">How we work</a></li>
+      <li><a href="">Blog</a></li>
+      <li><a href="">Account</a></li>
+      <a class="btn" href="#viewplans">View plans</a>
+      <div class="mobile-nav">
+        <h2 class="logo">INSURE</h2>
+        <img
+          onclick="closemenu()"
+          src="./images/icon-close.svg"
+          alt="close_icon"
+        />
+      </div>
+    </ul>
+    <img
+      onclick="openmenu()"
+      src="./images/icon-hamburger.svg"
+      alt="open_hambuger"
+    />
+  </nav>
 
 
   <section class="showcase">
     <div>
-      <img class="lg:hidden" src="./images/image-intro-mobile.jpg" alt="" class="w-full">
+      <img src="./images/image-intro-mobile.jpg" alt="" class="lg:hidden w-full">
     </div>
 
-      <div class="showcase-content relative py-20 px-5">
-        <img class="absolute top-0 left-0" src="./images/bg-pattern-intro-left-mobile.svg" alt="" >
-        <h1 class="text-white text-center text-5xl  ">
-          Humanizing your insurance
-        </h1>
-        <p class="text-center text-white mt-5 mb-7">
-          Get your life insurance coverage easier and faster. We blend our
-          expertise and technology to help you find the plan that’s right
-          for you. Ensure you and your loved ones are protected.
-        </p>
+      <div class="showcase-content relative py-20 px-5 lg:py-40 lg:mb-20">
+        <picture>
+          <img class="lg:hidden absolute top-0 left-0" media="(min-width:600 )" srcset="./images/bg-pattern-intro-left-mobile.svg">
+          <img class="hidden lg:block absolute -bottom-44 w-56 left-0" src="./images/bg-pattern-intro-left-desktop.svg" alt="" >
+        </picture>
+        <div class=" lg:text-left lg:w-1/2 md:pl-10 lg:pl-32">
 
-        <div class="text-center">
-          <button class="border-white border-2 py-2 px-6 uppercase text-white ">View plans</button>
-          <img class="absolute right-0 -bottom-40" src="./images/bg-pattern-intro-right-mobile.svg" alt=""> 
+          <h1 class="text-white text-center text-6xl lg:text-left ">
+            Humanizing your insurance
+          </h1>
+          <p class="text-center lg:text-left text-white mt-5 mb-7">
+            Get your life insurance coverage easier and faster. We blend our
+            expertise and technology to help you find the plan that’s right
+            for you. Ensure you and your loved ones are protected.
+          </p>
         </div>
-  
+
+        <div class="text-center lg:pl-32  lg:text-left">
+          <button class="border-white border-2 py-2 px-6 uppercase text-white ">View plans</button>
+          <picture>
+            <img class="lg:hidden absolute right-0 -bottom-40" srcset="./images/bg-pattern-intro-right-mobile.svg">
+          </picture>
+        </div>
+        
       </div>
       <div class="">
-        <img class="hidden lg:block absolute top-20" src="./images/image-intro-desktop.jpg" alt="" class="w-full">
+        <img class="hidden lg:block md:mr-10 absolute lg:top-32 lg:right-0 lg:mr-20" src="./images/image-intro-desktop.jpg" alt="" class="w-full">
       </div>
-  
+      <img class="hidden lg:block absolute right-0 top-20 w-64" src="./images/bg-pattern-intro-right-desktop.svg" alt=""> 
+      
   </section>
 
 
@@ -197,6 +219,16 @@
 
   </footer>
 
+
+  <script>
+    var sidemeu = document.getElementById('sidemenu');
+    function openmenu() {
+      sidemeu.style.right = '0';
+    }
+    function closemenu() {
+      sidemeu.style.right = '-100%';
+    }
+  </script>
 </body>
 
     
