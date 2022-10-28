@@ -1,0 +1,54 @@
+body {
+  font-family: 'Karla', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'DM Serif Display', sans-serif;
+}
+
+.showcase-content {
+  background: hsl(256, 26%, 20%);
+}
+
+.hrr {
+  background: hsl(0, 0%, 58%);
+  margin: auto;
+  width: 100px;
+  height: 2px;
+}
+
+.footer-list h3 {
+  text-transform: uppercase;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: hsl(0, 0%, 58%);
+}
+
+.footer-list ul li a {
+  font-size: 14px;
+  color: hsl(256, 26%, 20%);
+  font-size: bold !important;
+}
+
+footer {
+  background: hsl(0, 0%, 92%) !important;
+  font-size: bold;
+}
+
+.showcase-content.hidden {
+  padding-bottom: 58px !important;
+}
+.attribution {
+  margin-top: 25px;
+  font-size: 18px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(256, 26%, 20%);
+  text-decoration: none;
+}

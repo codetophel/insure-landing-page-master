@@ -1,0 +1,63 @@
+.intro {
+  position: relative;
+  margin-bottom: 18rem;
+}
+
+.intro-right-pattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18rem;
+}
+
+.intro-left-pattern {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.intro-col-2 img {
+  padding-right: 10%;
+  position: absolute;
+  top: 5rem;
+  right: 0;
+}
+.mobile-nav {
+  display: none;
+}
+
+.mobile-pattern {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .intro-col-1,
+  .intro-col-2 {
+    display: block;
+    margin-top: -5px !important;
+  }
+
+  .intro {
+    position: inherit;
+    margin-bottom: 2rem;
+  }
+
+  .intro-col-1 {
+    text-align: center;
+    padding: 0px 5%;
+  }
+
+  .intro-col-2 img {
+    position: initial;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .intro-left-pattern,
+  .intro-right-pattern {
+    display: none;
+  }
+
+  nav {
+    position: relative;
+  }
+}
